@@ -1,0 +1,94 @@
+crip-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Madeby = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local stroke = Instance.new("UIStroke")
+--Properties:
+
+Madeby.Name = "Made by"
+Madeby.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Madeby.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Madeby
+Frame.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.867342412, 0, 0.784843266, 0)
+Frame.Size = UDim2.new(0, 281, 0, 116)
+
+UICorner.CornerRadius = UDim.new(0.100000001, 0)
+UICorner.Parent = Frame
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0213523135, 0, 0.0517241396, 0)
+ImageLabel.Size = UDim2.new(0, 35, 0, 35)
+ImageLabel.Image = "rbxassetid://6187009322"
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.11743772, 0, 0.137931034, 0)
+TextLabel.Size = UDim2.new(0, 214, 0, 50)
+TextLabel.Font = Enum.Font.Merriweather
+TextLabel.Text = "Made by Syringe Co"
+TextLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.256227762, 0, 0.724137902, 0)
+TextLabel_2.Size = UDim2.new(0, 137, 0, 17)
+TextLabel_2.Font = Enum.Font.Merriweather
+TextLabel_2.Text = "have fun"
+TextLabel_2.TextColor3 = Color3.fromRGB(200, 200, 200)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.879003584, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 34, 0, 34)
+TextButton.Visible = false
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+stroke.Parent = Frame
+stroke.Color = Color3.new(1,1,1)
+-- Scripts:
+
+local function WEDXS_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	wait(8)
+	script.Parent.Visible = true
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(WEDXS_fake_script)()
